@@ -1,13 +1,35 @@
-!
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Nova AI</h1>
-    <p>Your personal AI assistant.</p>
+    <div class="chat-container">
+        <header>
+            <h1>Nova AI</h1>
+            <p>Your personal AI assistant</p>
+        </header>
+
+        <main id="chat-messages">
+            <div class="message bot">
+                Hi! I'm Nova. What would you like to know?
+            </div>
+        </main>
+
+        <form id="chat-form">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Message Nova AI..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
 </html>
